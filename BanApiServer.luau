@@ -18,8 +18,17 @@ end)
 
 game.ReplicatedStorage.Directory.Remotes.BanPlayer.OnServerEvent:Connect(function(player, playertoban, applyToUniverse, duration, display, privReason, ExcludeAlts)
   for _, admin in ipairs(GlobalVars.Administrators) do
+    if typeof(admin, string) then
+
     if player.Name == admin then
+      BanPlayer(playertoban, applyToUniverse, duration, display, privReason, excludeAlts)
+    end)
+
+    elseif typeof(admin, number) then
+     if player.UserID == admin then
       BanPlayer(playertoban, applyToUniverse, duration, display, privReason, excludeAlts)
     end)
   end)
 end)
+
+
