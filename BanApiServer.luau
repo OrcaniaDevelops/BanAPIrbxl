@@ -99,6 +99,7 @@ UnbanPlayerEvent.OnServerEvent:Connect(function(player, playertounban, applytoun
   end)
 end)
 
+-- Event that handles kicking
 KickPlayerEvent.OnServerEvent:Connect(function(player, playertokick, reason)
   for _, admin in ipairs(GlobalVars.Administrators) do
     if typeof(admin, string) then
