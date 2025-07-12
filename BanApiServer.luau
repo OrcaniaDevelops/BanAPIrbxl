@@ -33,7 +33,7 @@
 -- Created 7/9/25
 -- Last Updated 7/9/25
 
-local Players = game:GetService(“Players”)
+local Players = game:GetService("Players")
 
 local GlobalVars = require(game.ReplicatedStorage.Directory.Modules.Variables) -- Module that contains all common variables and keys
 
