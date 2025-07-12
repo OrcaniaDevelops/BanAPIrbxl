@@ -59,7 +59,7 @@ local function UnbanPlayer(player: Player, applyToUniverse: boolean)
 end)
 
 -- Function kicking said player
-local function KickPlayer(player, reason)
+local function KickPlayer(player: Player, reason: string)
   player:Kick(reason)
 end)
 
